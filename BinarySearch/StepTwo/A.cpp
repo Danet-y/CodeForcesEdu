@@ -4,7 +4,7 @@ using namespace std;
 #define pb push_back
 #define mk make_pair
 #define all(v) v.begin(),v.end()
-#define int unsigned long long int
+#define int long long int
 #define F first
 #define S second
 #define tagh2(j) j>>1
@@ -22,27 +22,27 @@ int MOD(int a, int b){return (a%b + b) % b;}
 int sexygirl(int n){return (1ull << n);}
 int cal(vector<int> arr1,vector<int> v,int sz){return memcmp(arr1.data(), v.data(), sz * sizeof(v[0])) == 0;}
 int ans = -1;
+bool check(int x,int w,int h,int n)
+{
+    return ((x/w)*(x/h))>=n;
+}
 int bins(int w,int h,int n)
 {
-        int l = 1;
-		int r = 1e18;
-		int mid;
-        while(l <= r)
-        {
-            mid = l + (r-l)/2;
-            int temp = (mid/w) * (mid/h);
-            if(temp < n)
-            {
-                l = mid+1;
-            }
-            else
-            {
-                ans = mid;
-                r = mid-1;
-            }
-        }
-        cout << ans ;
-		return 0;
+	int l = 0;
+	int r = 1;
+    while(!check(r,w,h,n))
+        r*=2;  
+    
+    while(l+1<r)        
+    {
+    	int mid=(l+r)/2;
+        if(check(mid,w,h,n))
+            r=mid;
+        else
+            l=mid;
+    }
+	cout << r;
+	return 0;
 }
 int32_t main()
 {
