@@ -6,7 +6,7 @@ using namespace std;
 #define all(v) v.begin(),v.end()
 #define int long long int
 #define F first
-#define S second
+#define S second 
 #define tagh2(j) j>>1
 #define zarb2(j) j<<1
 const int N=1e5,MX=2e4+23,mod=1e9+7;
