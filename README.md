@@ -1,3 +1,12 @@
 # CodeForcesEdu
 ## Codeforces EDU solutiones . 
-Update 1 => Binarysearch Added.
+#LAST UPDATE:
+BinarySearch 
+  Step1 added
+  
+SegmentTree
+    PART 1
+      Step1 added
+      Step2 added
+      Step3 1/5 added
+        
